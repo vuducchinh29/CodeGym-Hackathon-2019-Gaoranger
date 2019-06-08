@@ -3,10 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MainboardComponent } from './mainboard/mainboard.component';
+import { QuestionAreaComponent } from './question-area/question-area.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainboardComponent,
+    QuestionAreaComponent
   ],
   imports: [
     BrowserModule,
