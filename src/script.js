@@ -31,3 +31,13 @@ function focusImage3(elem) {
   // add 'active' classs to the element that was clicked
   elem.classList.add('choose3');
 }
+function checkAnswer() {
+  var elems = document.getElementsByClassName('img-stone');
+  for (var i=0;i<elems.length;i+=1){
+    elems[i].style.display = 'none';
+  }
+  var elems2 = document.getElementsByClassName('dung');
+  for (var i=0;i<elems2.length;i+=1){
+    elems2[i].style.display = 'block';
+  }
+}

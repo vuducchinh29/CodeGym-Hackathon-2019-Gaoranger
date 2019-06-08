@@ -20,4 +20,5 @@ export class MainboardComponent implements OnInit {
   changeArea(param) {
     this.sendImageURL.emit(param);
   }
+
 }

@@ -78,7 +78,13 @@ body{
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
 }
-.option-choose:hover img{
+.qa-image img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.option-choose:hover img, .qa-image img{
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
   -webkit-filter: drop-shadow(1px 1px 0 red)

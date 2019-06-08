@@ -131,6 +131,28 @@
       // add 'active' classs to the element that was clicked
       elem.classList.add('choose10');
     }
+
+    function checkAnswer() {
+      var elems = document.getElementsByClassName('img-stone');
+      for (var i = 0; i < elems.length; i += 1) {
+        elems[i].style.display = 'none';
+      };
+      var elems2 = document.getElementsByClassName('dung');
+      for (var i = 0; i < elems2.length; i += 1) {
+        elems2[i].style.display = 'block';
+      };
+    }
+
+    function hideQuestionArea() {
+      var elems3 = document.getElementsByClassName('question-area-box');
+      for (var i=0;i<elems3.length;i+=1){
+        elems3[i].style.display = 'none';
+      };
+      setTimeout(function(){
+        var elems4 = document.getElementById('dialog-hidden');
+        elems4.style.display = 'block';
+      }, 500);
+    }
   </script>
 </body>
 </html>
