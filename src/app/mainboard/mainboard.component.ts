@@ -7,6 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class MainboardComponent implements OnInit {
   @Output() sendIndex = new EventEmitter<number>();
+  @Output() sendImageURL = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
@@ -14,5 +15,9 @@ export class MainboardComponent implements OnInit {
 
   changeQuestion(para) {
     this.sendIndex.emit(para);
+  }
+
+  changeArea(param) {
+    this.sendImageURL.emit(param);
   }
 }
