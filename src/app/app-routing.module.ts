@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: 'q1',
     component: QuestionAreaComponent
-  },
+  }
 ];
 
 @NgModule({
