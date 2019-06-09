@@ -3,6 +3,7 @@ import {Question} from '../Model/Question';
 import {ActivatedRoute} from '@angular/router';
 import {QuestionService} from '../service/question.service';
 import {ITurn} from '../Model/turn';
+import {IUser} from '../Model/user';
 
 @Component({
   selector: 'app-manhinh03',
@@ -26,6 +27,8 @@ export class Manhinh03Component implements OnInit {
   question: Question;
   mangTraLoi = new Array(10);
   markPoint = 0;
+  turn: ITurn;
+  user: IUser;
 
   doicauhoi(indexChoosen) {
     if (!(parseInt(indexChoosen[0]) == 9 && parseInt(indexChoosen[1]) == 9)) {
@@ -61,14 +64,9 @@ export class Manhinh03Component implements OnInit {
       error => {
         console.log(error);
       });
-
-
-    // const name = +this.route.snapshot.paramMap.get('name');
-    // this.questService.getTurnByUserName(name.).subscribe(
-    //   next => (this.gameturn = next),
-    //   error => {
-    //     console.log(error);
-    //   });
+    this.questService.getTurnById(1).subscribe(n => {this.turn = n;
+    this.questService.getUser(id).subscribe(next => this.user = next , e => console.log(e));
+    }, e => console.log(e) );
   }
 
   // saveTurn() {
@@ -76,7 +74,7 @@ export class Manhinh03Component implements OnInit {
   // }
 
   addClassForCorrectAnswer() {
-    var result;
+    let result;
     for (let i = 0; i < this.mangcauhoi.length; i++) {
       result = this.mangcauhoi[i].result;
       console.log(result);
@@ -91,7 +89,7 @@ export class Manhinh03Component implements OnInit {
         ++this.markPoint;
       }
     }
-    alert('May duoc ' + this.markPoint + ' diem. Gioi lam thang ngu a!');
+    alert(  'Chà, nhà ngươi đã trả lời đúng được ' + this.markPoint + '/10 câu!');
     this.markPoint = 0;
   }
 }

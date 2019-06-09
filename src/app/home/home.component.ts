@@ -11,6 +11,7 @@ import {ITurn} from '../Model/turn';
 })
 export class HomeComponent implements OnInit {
   userForm: FormGroup;
+  turn: ITurn;
 
   constructor(private homeService: HomeNeedServiceService,
               private route: ActivatedRoute,
@@ -29,11 +30,7 @@ export class HomeComponent implements OnInit {
       const {value} = this.userForm;
       this.homeService.updateUser(value).subscribe(() => console.log('ok'), e => console.log(e));
       // @ts-ignore
-      const turn: ITurn;
-      turn.user_Id = 1;
-      turn.cat_Id = n;
-      turn.mark = 0;
-      this.homeService.postTurn(turn).subscribe(() => console.log('ok'));
+      this.homeService.postTurn(this.turn).subscribe(() => console.log('ok'));
     }
   }
 }
