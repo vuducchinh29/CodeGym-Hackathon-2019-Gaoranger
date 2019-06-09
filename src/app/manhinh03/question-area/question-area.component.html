@@ -1,6 +1,6 @@
 <div class="box box-qa" style="height: 500px;">
   <div class="qa-image">
-    <img src="https://i.ibb.co/8Dttw4x/guom-khien.png" alt="guom" style="height: 200px; display: block; margin: 0 auto;" onclick="checkAnswer();">
+    <img (click)="checkPoint();" src="https://i.ibb.co/8Dttw4x/guom-khien.png" alt="guom" style="height: 200px; display: block; margin: 0 auto;" onclick="checkAnswer();">
   </div>
   <div class="dialog hidden" id="dialog-hidden" style="display: none;">
     <img src="https://i.ibb.co/CzqbyJY/dialog-hero.png" alt="dialog" style="height: 300px; display: block; margin-top: -80px; margin-left: 50px" onclick="checkAnswer();">
@@ -11,7 +11,7 @@
   </div>
   <div class="question-area-box">
     <div class="question-content">
-      <p>{{questionNhan.question}}</p>
+      <p>{{questionNhan.content}}</p>
     </div>
     <div class="answer-area row" style="height: 30%; margin: 30px">
       <div class="answer-option col-md-6">

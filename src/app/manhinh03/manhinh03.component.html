@@ -1,0 +1,8 @@
+<div class="container" style="height: auto;">
+  <div class="row">
+    <app-mainboard class="col-md-6" (sendIndex)="doicauhoi($event)"></app-mainboard>
+    <app-question-area class="col-md-6" *ngIf="question"
+                       [questionNhan]="question" (checkCorrect)="checkPoint()"></app-question-area>
+  </div>
+  <router-outlet></router-outlet>
+</div>

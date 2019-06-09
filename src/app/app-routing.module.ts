@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {QuestionAreaComponent} from './question-area/question-area.component';
-import {root} from 'rxjs/internal-compatibility';
+import {Manhinh03Component} from './manhinh03/manhinh03.component';
+import {HomeComponent} from './home/home.component';
 
 const routes: Routes = [
   {
-    path: 'q1',
-    component: QuestionAreaComponent
+    path: '',
+    component: HomeComponent
   },
-  // {
-  //   path: 'questions/:id',
-  //   component: root
-  // }
+  {
+    path: 'questions/:id',
+    component: Manhinh03Component
+  }
 ];
 
 @NgModule({

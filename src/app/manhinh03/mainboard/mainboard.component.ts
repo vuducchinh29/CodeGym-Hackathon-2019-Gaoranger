@@ -6,8 +6,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./mainboard.component.scss']
 })
 export class MainboardComponent implements OnInit {
-  @Output() sendIndex = new EventEmitter<number>();
-  @Output() sendImageURL = new EventEmitter<string>();
+  @Output() sendIndex = new EventEmitter<string>();
+  // @Output() sendImageURL = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
@@ -17,8 +17,8 @@ export class MainboardComponent implements OnInit {
     this.sendIndex.emit(para);
   }
 
-  changeArea(param) {
-    this.sendImageURL.emit(param);
-  }
+  // changeArea(param) {
+  //   this.sendImageURL.emit(param);
+  // }
 
 }

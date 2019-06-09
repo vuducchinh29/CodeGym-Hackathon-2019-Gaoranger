@@ -153,6 +153,17 @@
         elems4.style.display = 'block';
       }, 500);
     }
+
+    function showQuestionArea() {
+      var elems4 = document.getElementById('dialog-hidden');
+      elems4.style.display = 'none';
+      setTimeout(function(){
+        var elems3 = document.getElementsByClassName('question-area-box');
+        for (var i=0;i<elems3.length;i+=1){
+          elems3[i].style.display = 'block';
+        };
+      }, 500);
+    }
   </script>
 </body>
 </html>

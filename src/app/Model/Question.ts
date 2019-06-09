@@ -1,18 +1,18 @@
 export class Question {
-  question: string;
+  content: string;
   optionA: string;
   optionB: string;
   optionC: string;
   optionD: string;
-  correct: string;
+  result: string;
 
 
-  constructor(question: string, optionA: string, optionB: string, optionC: string, optionD: string, correct: string) {
-    this.question = question;
+  constructor(content: string, optionA: string, optionB: string, optionC: string, optionD: string, result: string) {
+    this.content = content;
     this.optionA = optionA;
     this.optionB = optionB;
     this.optionC = optionC;
     this.optionD = optionD;
-    this.correct = correct;
+    this.result = result;
   }
 }
